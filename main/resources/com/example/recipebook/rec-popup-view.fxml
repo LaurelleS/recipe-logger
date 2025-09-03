@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.recipebook.RecPopupViewController"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox>
+        <HBox>
+            <Label text="Name"/>
+            <TextField fx:id="recName"/>
+        </HBox>
+        <Label text="Ingredients"/>
+        <Label fx:id="newRecList"/>
+        <TextField fx:id="recInstr"/>
+        <Button fx:id="addRecIng" text="Add" alignment="CENTER" onAction="#addRecIngHandler"/>
+        <HBox>
+            <Button fx:id="saveRec" text="Save" onAction="#addRecHandler"/>
+            <Button fx:id="cancelRec" text="Cancel" onAction="#cancel"/>
+        </HBox>
+    </VBox>
+
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER" prefHeight="600.0" prefWidth="600.0" spacing="20.0"
+      xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12"
+      fx:controller="com.example.recipebook.RecipeBookController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+  <VBox>
+    <Label text="My Ingredients"/>
+    <ScrollPane>
+      <Label fx:id="listIngs" text=""/>
+    </ScrollPane>
+    <Button fx:id="addIngButton" text="Add New Ingredient" onAction="#addIngredient"/>
+  </VBox>
+  <VBox>
+    <Label text="Recipes"/>
+      <Accordion fx:id="accordion">
+        <!--    Add titled panes dynamically when a recipe is added -->
+      </Accordion>
+      <HBox>
+        <Button fx:id="addRecButton" text="Add new Recipe" onAction="#addRecipe"/>
+        <Button fx:id="makeRecButton" text="Make Recipe" onAction="#makeRecipe" disable="true"/>
+      </HBox>
+    <Label fx:id="recStatus"/>
+    <Button fx:id="seeCart" text="See Shopping Cart" onAction="#showCart"/>
+  </VBox>
+</HBox>
